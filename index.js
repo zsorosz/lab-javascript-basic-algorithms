@@ -76,3 +76,30 @@ for (let i = 0; i < longText.length; i++) {
 }
 
 console.log(etCount);
+
+// Bonus 2
+
+const phraseToCheck = "Was it a car or a cat I saw?";
+let phraseForwards = "";
+let phraseBackwards = "";
+
+let isPalindrome = false;
+
+for (let i = phraseToCheck.length - 1; i >= 0; i--) {
+  if (
+    phraseToCheck[i].toLowerCase() >= "a" &&
+    phraseToCheck[i].toLowerCase() <= "z"
+  ) {
+    phraseForwards += phraseToCheck[i].toLowerCase();
+  }
+}
+
+for (let i = phraseForwards.length - 1; i >= 0; i--) {
+  phraseBackwards += phraseForwards[i];
+}
+
+if (phraseForwards === phraseBackwards) {
+  isPalindrome = true;
+}
+
+console.log(isPalindrome);
