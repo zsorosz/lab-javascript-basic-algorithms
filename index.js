@@ -21,3 +21,31 @@ if (hacker1.length > hacker2.length) {
 }
 
 // Iteration 3: Loops
+let hacker1Modified = "";
+for (let i = 0; i < hacker1.length; i++) {
+  if (i < hacker1.length - 1) {
+    hacker1Modified += hacker1[i].toUpperCase() + " ";
+  } else {
+    hacker1Modified += hacker1[i].toUpperCase();
+  }
+}
+
+console.log(hacker1Modified);
+
+let hacker2Modified = "";
+
+for (var j = hacker2.length - 1; j >= 0; j--) {
+  hacker2Modified += hacker2[j];
+}
+
+console.log(hacker2Modified);
+
+let order = hacker1.localeCompare(hacker2);
+
+if (order < 0) {
+  console.log("The driver's name goes first.");
+} else if (order > 0) {
+  console.log("Yo, the navigator goes first definitely.");
+} else {
+  console.log("What?! You both have the same name?");
+}
