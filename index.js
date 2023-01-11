@@ -49,3 +49,30 @@ if (order < 0) {
 } else {
   console.log("What?! You both have the same name?");
 }
+
+// Bonus 1
+const longText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non orci dui. Donec ullamcorper ligula sodales, porttitor sem et, fermentum ipsum. Ut quis semper neque, et scelerisque dui. Cras euismod sollicitudin quam eu porta. Mauris porta viverra convallis. In justo eros, iaculis sit amet ligula non, rutrum ultrices purus. Mauris sit amet purus sit amet diam cursus varius eu ut mauris. Morbi consectetur tempus ipsum, sed aliquet enim efficitur at. Fusce laoreet volutpat nulla, sed ultricies nibh bibendum et. Vestibulum nec lacus tristique, accumsan arcu id, venenatis elit. Duis vitae mollis magna. Mauris et risus vel elit rutrum blandit auctor varius mi. Donec pretium eros a turpis pulvinar faucibus. Curabitur pharetra enim ac ornare dictum. Vivamus gravida ligula ipsum, eu scelerisque nisi vulputate id. Duis et aliquet arcu. Phasellus sed est feugiat, tempus leo nec, maximus nisl. In hac habitasse platea dictumst. Phasellus tempor in metus ut venenatis. Ut scelerisque iaculis dui, eu sodales enim. Integer arcu diam, volutpat quis condimentum malesuada, hendrerit eu ipsum. Phasellus ac magna nec urna commodo consequat eu egestas enim. Ut sed massa enim. Integer et orci nec ligula condimentum semper. Nunc neque nisl, tincidunt nec tortor sed, scelerisque rutrum dui. Donec mi dolor, cursus sit amet tincidunt sed, eleifend quis neque. Phasellus ut tellus velit. Etiam vitae lorem ipsum. Sed viverra, tortor nec mattis porta, urna lacus ultricies purus, eu tincidunt orci neque id arcu. Vestibulum faucibus, lacus sed vehicula consectetur, diam purus lacinia augue, quis dignissim tortor purus vitae nulla. Phasellus mollis quis ex id ultricies. Fusce congue pharetra orci et pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada fermentum consectetur. Proin ultricies sed augue eu tincidunt. Nulla vel fringilla ex. Nullam ac dolor laoreet, sodales diam id, consequat sem. Sed euismod, nunc pretium viverra pretium, ligula libero venenatis enim, ac hendrerit justo tortor sit amet turpis. Vestibulum aliquet vehicula purus, id tincidunt est molestie congue.";
+
+let wordCount = 1;
+
+for (let i = 0; i < longText.length; i++) {
+  if (longText[i] === " ") {
+    wordCount++;
+  }
+}
+
+console.log(wordCount);
+
+let etCount = 0;
+
+for (let i = 0; i < longText.length; i++) {
+  if (
+    longText[i] + longText[i + 1] + longText[i + 2] + longText[i + 3] ===
+    " et "
+  ) {
+    etCount++;
+  }
+}
+
+console.log(etCount);
